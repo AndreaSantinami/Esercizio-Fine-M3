@@ -1,0 +1,174 @@
+/* Body */
+body {
+    background-color: #141414;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar img {
+    border-radius: 50%;
+}
+
+/* Sezioni e Card */
+.section-title {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 250px;
+    align-items: center;
+    gap: 15px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    flex: 0 0 auto;
+}
+
+.item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.item img:hover {
+    transform: scale(1.05);
+}
+
+/* Pulsanti di scorrimento */
+.btn-scroll {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    
+}
+
+.btn-scroll.left {
+    left: 0;
+}
+
+.btn-scroll.right {
+    right: 0;
+}
+
+.section {
+    position: relative;
+}
+
+/* Pulsanti */
+.btn-outline-light {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-light.active,
+.btn-outline-light:active {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-outline-light:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-sm {
+    font-size: 0.875rem;
+    padding: 5px 10px;
+    border-radius: 0;
+}
+
+/* Titolo */
+h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Dropdown Genres */
+.genres-dropdown {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    border: none;
+    border-radius: 0%;
+}
+
+.genres-dropdown a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: text-decoration 0.3s;
+}
+
+.genres-dropdown a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    background-color: #141414;
+    color: #b3b3b3;
+    padding: 40px 0;
+    font-size: 0.875rem;
+}
+
+.footer a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-icons a {
+    margin-right: 15px;
+    font-size: 1.25rem;
+    color: #b3b3b3;
+}
+
+.footer .service-code {
+    border: 1px solid #b3b3b3;
+    padding: 5px 10px;
+    color: #b3b3b3;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    font-size: 0.75rem;
+}
+
+
+
+/* Stato iniziale: nasconde le sezioni */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Stato visibile: mostra le sezioni */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
